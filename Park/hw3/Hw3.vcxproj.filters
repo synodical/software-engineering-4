@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일\CreateProduct">
+      <UniqueIdentifier>{a52a1b1d-53f7-45b2-aaf2-1c308856c479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\CreateProduct">
+      <UniqueIdentifier>{acc45d33-2f13-4aee-be87-43694fcb6273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Person">
+      <UniqueIdentifier>{cbd91e3b-fa9a-45b6-b21f-f1a42aafc112}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Person">
+      <UniqueIdentifier>{074f9564-aefd-4cbe-87d4-9c331c417e3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ListSellingProduct">
+      <UniqueIdentifier>{8cada717-e672-4bfd-b661-80ce66dc537c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ListSellingProduct">
+      <UniqueIdentifier>{e1aa9544-b23f-4f6b-bbe9-3f7d685120c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ListSoldProduct">
+      <UniqueIdentifier>{39c2c79d-829c-4554-a231-ba47923da79a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ListSoldProduct">
+      <UniqueIdentifier>{2a87caad-9782-4208-b01e-5d208082a941}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ShowSalesSatistics">
+      <UniqueIdentifier>{881f1e81-97f3-4a0e-80f0-d530fea2c0bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\ShowSalesSatistics">
+      <UniqueIdentifier>{d3804078-dca4-48f1-8076-cf3996fdfdb2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Product.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DataBase.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateProduct.cpp">
+      <Filter>소스 파일\CreateProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="CreateProductUI.cpp">
+      <Filter>소스 파일\CreateProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="Buyer.cpp">
+      <Filter>소스 파일\Person</Filter>
+    </ClCompile>
+    <ClCompile Include="Member.cpp">
+      <Filter>소스 파일\Person</Filter>
+    </ClCompile>
+    <ClCompile Include="Seller.cpp">
+      <Filter>소스 파일\Person</Filter>
+    </ClCompile>
+    <ClCompile Include="ListSellingProduct.cpp">
+      <Filter>소스 파일\ListSellingProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="ListSellingProductUI.cpp">
+      <Filter>소스 파일\ListSellingProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="ListSoldProduct.cpp">
+      <Filter>소스 파일\ListSoldProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="ListSoldProductUI.cpp">
+      <Filter>소스 파일\ListSoldProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowSalesSatistics.cpp">
+      <Filter>소스 파일\ShowSalesSatistics</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowSalesSatisticsUI.cpp">
+      <Filter>소스 파일\ShowSalesSatistics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Product.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="DataBase.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateProduct.h">
+      <Filter>헤더 파일\CreateProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="CreateProductUI.h">
+      <Filter>헤더 파일\CreateProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="Buyer.h">
+      <Filter>헤더 파일\Person</Filter>
+    </ClInclude>
+    <ClInclude Include="Member.h">
+      <Filter>헤더 파일\Person</Filter>
+    </ClInclude>
+    <ClInclude Include="Seller.h">
+      <Filter>헤더 파일\Person</Filter>
+    </ClInclude>
+    <ClInclude Include="ListSellingProduct.h">
+      <Filter>헤더 파일\ListSellingProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="ListSellingProductUI.h">
+      <Filter>헤더 파일\ListSellingProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="ListSoldProduct.h">
+      <Filter>헤더 파일\ListSoldProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="ListSoldProductUI.h">
+      <Filter>헤더 파일\ListSoldProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowSalesSatistics.h">
+      <Filter>헤더 파일\ShowSalesSatistics</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowSalesSatisticsUI.h">
+      <Filter>헤더 파일\ShowSalesSatistics</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
