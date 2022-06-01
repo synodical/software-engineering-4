@@ -12,7 +12,7 @@ public:
 
 	SignUpUI* GetSignUpUI() { return signUpUI; }
 
-	bool AddNewMember(std::string name, std::string ssn, std::string id, std::string password);
+	void AddNewMember(std::string name, std::string ssn, std::string id, std::string password);
 
 private:
 	DataBase* dataBase;

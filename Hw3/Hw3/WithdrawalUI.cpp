@@ -15,15 +15,7 @@ void WithdrawalUI::StartInterface()
 
 void WithdrawalUI::SelectWithdrawal(Withdrawal* withdrawal, File* file)
 {
-    std::string blank = "";
     std::string result = withdrawal->TryWithdrawal();
-
-    if (result == blank) {
-        file->ofs << "1.2. È¸¿øÅ»Åð" << '\n';
-        file->ofs << '\n' << '\n';
-    }
-    else {
-        file->ofs << "1.2. È¸¿øÅ»Åð" << '\n';
-        file->ofs << "> " << result << " " << "\n" << "\n";
-    }
+    file->ofs << "1.2. È¸¿øÅ»Åð" << '\n';
+    file->ofs << "> " << result << " " << "\n" << "\n";
 }

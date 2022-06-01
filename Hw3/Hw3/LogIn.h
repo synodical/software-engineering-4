@@ -12,7 +12,7 @@ public:
 
 	LogInUI* GetLogInUI() { return logInUI; }
 
-	bool TryLogIn(std::string id, std::string password);
+	void TryLogIn(std::string id, std::string password);
 private:
 	DataBase* dataBase;
 	LogInUI* logInUI;

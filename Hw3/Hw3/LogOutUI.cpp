@@ -14,14 +14,7 @@ void LogOutUI::StartInterface()
 
 void LogOutUI::SelectLogOut(LogOut* logOut, File* file)
 {
-    std::string blank = "";
     std::string result = logOut->TryLogOut();
-    if (result == blank) {
-        file->ofs << "2.2. ·Î±×¾Æ¿ô" << '\n';
-        file->ofs << '\n';
-    }
-    else {
-        file->ofs << "2.2. ·Î±×¾Æ¿ô" << '\n';
-        file->ofs << "> " << result << " " << "\n" << "\n";
-    }
+    file->ofs << "2.2. ·Î±×¾Æ¿ô" << '\n';
+    file->ofs << "> " << result << " " << "\n" << "\n";
 }

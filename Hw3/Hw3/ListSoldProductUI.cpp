@@ -3,6 +3,7 @@
 #include "File.h"
 #include "Product.h"
 #include <vector>
+#include <algorithm>
 
 ListSoldProductUI::ListSoldProductUI()
 {
@@ -18,7 +19,11 @@ void ListSoldProductUI::SelectShowList(ListSoldProduct* listSoldProduct, File* f
 {
 	std::vector<Product*> data = listSoldProduct->ShowSellerProducts();
 
-	// 오름차순 정렬 필요? ( 과제2 명세서에 명시됨 )
+	sort(data.begin(), data.end(), [](Product* first, Product* second) -> bool
+		{
+			return first->GetProductName() < second->GetProductName();
+		});
+
 	file->ofs << "3.3. 판매 완료 상품 조회" << '\n';
 	for (Product* product : data)
 	{

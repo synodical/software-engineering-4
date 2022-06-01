@@ -23,14 +23,7 @@ void LogInUI::SelectLogIn(LogIn* logIn, File* file)
 	file->ifs >> id >> password;
 	file->readed = file->ifs.tellg();
 
-	if (logIn->TryLogIn(id, password)) {
-		file->ofs << "2.1. 로그인" << '\n';
-		file->ofs << "> " << id << " " << password << " " << '\n' << '\n';
-	}
-	else {
-		file->ofs << "2.1. 로그인" << '\n';
-		file->ofs << "로그인 실패" << '\n' << '\n';
-	}
-
-
+	logIn->TryLogIn(id, password);
+	file->ofs << "2.1. 로그인" << '\n';
+	file->ofs << "> " << id << " " << password << " " << '\n' << '\n';
 }

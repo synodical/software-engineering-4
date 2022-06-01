@@ -21,13 +21,8 @@ LogOut::LogOut(DataBase* dataBase) {
 std::string LogOut::TryLogOut()
 {
     int index = this->dataBase->GetLogInIndex();
-    std::string blank = "";
     std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
-    if ((this->dataBase)->GetLogInIndex() == -1) {
-        return blank;
-    }
-    else {
-        (this->dataBase)->SetLogInIndex(-1);
-        return memberList[index]->GetID();
-    }
+    this->dataBase->SetLogInIndex(-1);
+
+    return memberList[index]->GetID();
 }

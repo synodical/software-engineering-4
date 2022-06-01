@@ -27,7 +27,7 @@ private:
 	int amount;	// 남은 수량
 	float averageSatisfaction;
 	int totalSales;	// 판매된 수량
-	int evaluateNum; // 판매된 수량
+	int evaluateNum; // 평가 개수
 	float totalScore; // 총점
 };
 

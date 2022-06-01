@@ -1,2 +1,15 @@
-﻿  WithdrawalUI.cpp
+﻿  LogIn.cpp
+C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Hw3\LogIn.cpp(27,16): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  LogInUI.cpp
+C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Hw3\LogInUI.cpp(24,32): warning C4244: '=': 'std::streamoff'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  LogOut.cpp
+  LogOutUI.cpp
+  SignUp.cpp
+  SignUpUI.cpp
+C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Hw3\SignUpUI.cpp(26,32): warning C4244: '=': 'std::streamoff'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Withdrawal.cpp
+  WithdrawalUI.cpp
+  main.cpp
+C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Hw3\main.cpp(51,33): warning C4244: '=': 'std::streamoff'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
   Hw3.vcxproj -> C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Debug\Hw3.exe

@@ -25,14 +25,7 @@ void SignUpUI::SelectSignUp(SignUp* signUp, File* file)
 	file->ifs >> name >> ssn >> id >> password;
 	file->readed = file->ifs.tellg();
 
-	if (signUp->AddNewMember(name, ssn, id, password)) {
-		file->ofs << "1.1. 회원가입" << '\n';
-		file->ofs << "> " << name << " " << ssn << " " << id << " " << password << " " << '\n' << '\n';
-	}
-	else {
-		file->ofs << "1.1. 회원가입" << '\n';
-		file->ofs << "> 회원가입 실패" << '\n' << '\n';
-	}
-
-
+	signUp->AddNewMember(name, ssn, id, password);
+	file->ofs << "1.1. 회원가입" << '\n';
+	file->ofs << "> " << name << " " << ssn << " " << id << " " << password << " " << '\n' << '\n';
 }

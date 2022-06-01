@@ -18,9 +18,7 @@ LogIn::LogIn(DataBase* dataBase) {
 	logInUI->StartInterface();
 }
 
-
-
-bool LogIn::TryLogIn(std::string id, std::string password)
+void LogIn::TryLogIn(std::string id, std::string password)
 {
 	int i = 0;
 
@@ -29,9 +27,6 @@ bool LogIn::TryLogIn(std::string id, std::string password)
 	for (i = 0; i < memberList.size(); i++) {
 		if ((memberList[i]->GetID() == id) && (memberList[i]->GetPassword() == password)) {
 			dataBase->SetLogInIndex(i);
-			return true;
 		}
 	}
-	return false;
-
 }
