@@ -11,5 +11,5 @@ private:
 public:
     BuyProduct();
     BuyProduct(DataBase* database);
-    void sendBuyRequest(Product * curProduct);
+    void SendBuyRequest(Product * curProduct);
 };

@@ -17,7 +17,7 @@ BuyProduct::BuyProduct(DataBase* database) {
     buyProductUI.StartInterface();
 }
 
-void BuyProduct::sendBuyRequest(Product * curProduct) {
+void BuyProduct::SendBuyRequest(Product * curProduct) {
     for (auto seller : database->GetSellerList()) {
         for (auto product : seller->GetProductList()) {
             if (curProduct->GetProductName() == product->GetProductName()) {

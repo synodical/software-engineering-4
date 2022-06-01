@@ -14,11 +14,14 @@ SearchProductInfo::SearchProductInfo(DataBase* database) {
     searchUI.StartInterface();
 }
 
-Product* SearchProductInfo::ShowProductDetails(std::string productName) {
-    for (auto seller : database->GetSellerList()) {
-        for (auto product : seller->GetProductList()) {
-            if (product->GetProductName() == productName) {
-               // product->getProductDetails();
+Product* SearchProductInfo::ShowProductDetails(std::string productName) 
+{
+    for (auto seller : database->GetSellerList())
+    {
+        for (auto product : seller->GetProductList()) 
+        {
+            if (product->GetProductName() == productName) 
+            {
                 return product;
             }
         }
