@@ -22,3 +22,10 @@ Product::Product(std::string productName, std::string companyName, std::string p
 	this->averageSatisfaction = 0.0f;
 	this->totalSales = 0;
 }
+
+void Product::SetProductDetails(float score)
+{
+	this->totalScore += score;
+	this->evaluateNum += 1;
+	this->averageSatisfaction = this->totalScore / this->evaluateNum;
+}

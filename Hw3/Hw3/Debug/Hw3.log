@@ -1,18 +1,2 @@
-﻿  Buyer.cpp
-  CreateProduct.cpp
-  CreateProductUI.cpp
-C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Hw3\CreateProductUI.cpp(25,32): warning C4244: '=': 'std::streamoff'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  DataBase.cpp
-  File.cpp
-  ListSellingProduct.cpp
-  ListSellingProductUI.cpp
-  ListSoldProduct.cpp
-  ListSoldProductUI.cpp
-  main.cpp
-C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Hw3\main.cpp(3,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'SignUp.h': No such file or directory
-  Member.cpp
-  Product.cpp
-  Seller.cpp
-  ShowSalesSatistics.cpp
-  ShowSalesSatisticsUI.cpp
-  코드를 생성하고 있습니다...
+﻿  WithdrawalUI.cpp
+  Hw3.vcxproj -> C:\Users\pgt01\Desktop\규라기\공부방\대학교\전공\4-1\소프트웨어공학\software-engineering-4\Hw3\Debug\Hw3.exe

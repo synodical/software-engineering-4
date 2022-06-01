@@ -2,8 +2,8 @@
 #include "SignUpUI.h"
 #include "DataBase.h"
 #include "Member.h"
-//#include "Seller.h"
-//#include "Buyer.h"
+#include "Seller.h"
+#include "Buyer.h"
 
 SignUp::SignUp()
 {
@@ -32,14 +32,10 @@ bool SignUp::AddNewMember(std::string name, std::string ssn, std::string id, std
 	}
 
 	Member* member = new Member(name, ssn, id, password);
+	Seller* seller = new Seller();
+	Buyer* buyer = new Buyer();
 	dataBase->AddMember(member);
+	dataBase->AddSeller(seller);
+	dataBase->AddBuyer(buyer);
 	return true;
-
-
-	//Seller* seller = new Seller();
-	//Buyer* buyer = new Buyer();
-	//dataBase->AddSeller(seller);
-	//dataBase->AddBuyer(buyer);
-
-	// ShowResult() 필요없음
 }

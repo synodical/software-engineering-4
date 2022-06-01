@@ -1,18 +1,11 @@
-//
-//  buyProduct.hpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
+#pragma once
+#include <iostream>
 
-#ifndef BuyProduct_hpp
-#define BuyProduct_hpp
+class DataBase;
+class Product;
 
-#include <stdio.h>
-#include "DataBase.hpp"
-#include "Product.hpp"
-
-class BuyProduct { // declare
+class BuyProduct
+{ // declare
 private:
     DataBase * database;
 public:
@@ -20,4 +13,3 @@ public:
     BuyProduct(DataBase* database);
     void sendBuyRequest(Product * curProduct);
 };
-#endif /* buyProduct_hpp */

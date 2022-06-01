@@ -3,7 +3,7 @@
 
 Seller::Seller()
 {
-
+	productsList.clear();
 }
 
 void Seller::CreateSellingProduct(Product* newProduct)

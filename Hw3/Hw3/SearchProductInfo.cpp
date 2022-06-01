@@ -1,25 +1,20 @@
-//
-//  searchProductInfo.cpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
 #include <iostream>
 #include "SearchProductInfo.hpp"
 #include "SearchProductInfoUI.hpp"
-#include "Seller.hpp"
-class SearchProductInfoUI;
+#include "Seller.h"
 
 SearchProductInfo::SearchProductInfo() {
     SearchProductInfoUI searchUI;
     searchUI.StartInterface();
 }
+
 SearchProductInfo::SearchProductInfo(DataBase* database) {
     this->database = database;
     SearchProductInfoUI searchUI;
     searchUI.StartInterface();
 }
-Product* SearchProductInfo::ShowProductDetails(string productName) {
+
+Product* SearchProductInfo::ShowProductDetails(std::string productName) {
     for (auto seller : database->GetSellerList()) {
         for (auto product : seller->GetProductList()) {
             if (product->GetProductName() == productName) {
@@ -28,8 +23,8 @@ Product* SearchProductInfo::ShowProductDetails(string productName) {
             }
         }
     }
-    // seller 접근
-    // seller.getProductList ->sller가 판매중인 상품들이 vector로..
-    // cout << "there's no product name like " << productName << endl; // 간혹 안 됨?
+    // seller ?�근
+    // seller.getProductList ->sller가 ?�매중인 ?�품?�이 vector�?.
+    // cout << "there's no product name like " << productName << endl; // 간혹 ????
     return nullptr;
 }

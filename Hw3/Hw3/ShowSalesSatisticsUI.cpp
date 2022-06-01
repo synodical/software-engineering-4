@@ -18,7 +18,7 @@ void ShowSalesSatisticsUI::SelectShowSatistics(ShowSalesSatistics* showSalesSati
 {
 	std::vector<Product*> data = showSalesSatistics->ShowSellerProducts();
 
-	file->ofs << "5.1 판매 상품 통계" << '\n';
+	file->ofs << "5.1. 판매 상품 통계" << '\n';
 	for (Product* product : data)
 	{
 		if (product->GetTotalSales() > 0)

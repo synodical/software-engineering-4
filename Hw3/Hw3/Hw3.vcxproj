@@ -140,36 +140,72 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Buyer.h" />
+    <ClInclude Include="BuyProduct.hpp" />
+    <ClInclude Include="BuyProductUI.hpp" />
+    <ClInclude Include="CheckPurchaseList.hpp" />
+    <ClInclude Include="CheckPurchaseListUI.hpp" />
     <ClInclude Include="CreateProduct.h" />
     <ClInclude Include="CreateProductUI.h" />
     <ClInclude Include="DataBase.h" />
+    <ClInclude Include="EvaluateSatisfaction.hpp" />
+    <ClInclude Include="EvaluateSatisfactionUI.hpp" />
     <ClInclude Include="File.h" />
     <ClInclude Include="ListSellingProduct.h" />
     <ClInclude Include="ListSellingProductUI.h" />
     <ClInclude Include="ListSoldProduct.h" />
     <ClInclude Include="ListSoldProductUI.h" />
+    <ClInclude Include="LogIn.h" />
+    <ClInclude Include="LogInUI.h" />
+    <ClInclude Include="LogOut.h" />
+    <ClInclude Include="LogOutUI.h" />
     <ClInclude Include="Member.h" />
     <ClInclude Include="Product.h" />
+    <ClInclude Include="SearchProductInfo.hpp" />
+    <ClInclude Include="SearchProductInfoUI.hpp" />
     <ClInclude Include="Seller.h" />
     <ClInclude Include="ShowSalesSatistics.h" />
     <ClInclude Include="ShowSalesSatisticsUI.h" />
+    <ClInclude Include="SignUp.h" />
+    <ClInclude Include="SignUpUI.h" />
+    <ClInclude Include="Withdrawal.h" />
+    <ClInclude Include="WithdrawalUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Buyer.cpp" />
+    <ClCompile Include="BuyProduct.cpp" />
+    <ClCompile Include="BuyProductUI.cpp" />
+    <ClCompile Include="CheckPurchaseList.cpp" />
+    <ClCompile Include="CheckPurchaseListUI.cpp" />
     <ClCompile Include="CreateProduct.cpp" />
     <ClCompile Include="CreateProductUI.cpp" />
     <ClCompile Include="DataBase.cpp" />
+    <ClCompile Include="EvaluateSatisfaction.cpp" />
+    <ClCompile Include="EvaluateSatisfactionUI.cpp" />
     <ClCompile Include="File.cpp" />
     <ClCompile Include="ListSellingProduct.cpp" />
     <ClCompile Include="ListSellingProductUI.cpp" />
     <ClCompile Include="ListSoldProduct.cpp" />
     <ClCompile Include="ListSoldProductUI.cpp" />
+    <ClCompile Include="LogIn.cpp" />
+    <ClCompile Include="LogInUI.cpp" />
+    <ClCompile Include="LogOut.cpp" />
+    <ClCompile Include="LogOutUI.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Member.cpp" />
     <ClCompile Include="Product.cpp" />
+    <ClCompile Include="SearchProductInfo.cpp" />
+    <ClCompile Include="SearchProductInfoUI.cpp" />
     <ClCompile Include="Seller.cpp" />
     <ClCompile Include="ShowSalesSatistics.cpp" />
     <ClCompile Include="ShowSalesSatisticsUI.cpp" />
+    <ClCompile Include="SignUp.cpp" />
+    <ClCompile Include="SignUpUI.cpp" />
+    <ClCompile Include="Withdrawal.cpp" />
+    <ClCompile Include="WithdrawalUI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input.txt" />
+    <Text Include="output.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,38 +2,37 @@
 #include "WithdrawalUI.h"
 #include "DataBase.h"
 #include "Member.h"
-//#include "Seller.h"
-//#include "Buyer.h"
-
-using namespace std;
 
 Withdrawal::Withdrawal()
 {
-	this->dataBase = nullptr;
-	withdrawalUI = new WithdrawalUI();
-	withdrawalUI->StartInterface();
+    this->dataBase = nullptr;
+    withdrawalUI = new WithdrawalUI();
+    withdrawalUI->StartInterface();
 }
 
 Withdrawal::Withdrawal(DataBase* dataBase)
 {
-	this->dataBase = dataBase;
-	withdrawalUI = new WithdrawalUI();
-	withdrawalUI->StartInterface();
+    this->dataBase = dataBase;
+    withdrawalUI = new WithdrawalUI();
+    withdrawalUI->StartInterface();
 }
 
-bool Withdrawal::TryWithdrawal(std::string id)
+std::string Withdrawal::TryWithdrawal()
 {
-	int i = 0;
+    int index = this->dataBase->GetLogInIndex();
+    std::string blank = "";
 
-	std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
-	
+    std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
 
-	for (i = 0; i < memberList.size(); i++) {
-		if (memberList[i]->GetID() == id) {
-			this->dataBase->DeleteMember(i);
-			return true;
-		}
-	}
-	return false;
-
+    if ((this->dataBase)->GetLogInIndex() == -1) {
+        return blank;
+    }
+    else {
+        std::string returnId = memberList[index]->GetID();
+        (this->dataBase)->DeleteMember(index);
+        (this->dataBase)->DeleteSeller(index);
+        (this->dataBase)->DeleteBuyer(index);
+        (this->dataBase)->SetLogInIndex(-1);
+        return returnId;
+    }
 }

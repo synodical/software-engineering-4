@@ -1,26 +1,22 @@
-//
-//  buyProductUI.cpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
-
 #include "BuyProductUI.hpp"
 #include "BuyProduct.hpp"
-#include "Product.hpp"
+#include "Product.h"
+#include "File.h"
 #include <iostream>
-using namespace std;
 
-void BuyProductUI::SelectBuy(BuyProduct* buyProduct, Product * curProduct) {
-    //cout << "select buy" << endl;
-    
+BuyProductUI::BuyProductUI()
+{
+
+}
+
+void BuyProductUI::SelectBuy(BuyProduct* buyProduct, Product * curProduct, File* file)
+{    
     buyProduct->sendBuyRequest(curProduct);
-    // file 쓰기가 진행됨
-    // [판매자ID] [상품명]
-    curProduct->GetProductName();
-    
-};
-void BuyProductUI::StartInterface() {
-    cout << "start buy ui" << endl;
+    file->ofs << "4.2. ��ǰ ����" << '\n';
+    file->ofs << "> " << curProduct->GetSellerID() << " " << curProduct->GetProductName() << '\n' << '\n'; 
 };
 
+void BuyProductUI::StartInterface() 
+{
+
+};

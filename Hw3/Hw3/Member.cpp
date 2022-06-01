@@ -2,7 +2,7 @@
 
 Member::Member()
 {
-	id = 1;// For Test
+
 }
 
 Member::Member(std::string name, std::string ssn, std::string id, std::string password)

@@ -12,10 +12,9 @@ public:
 
 	WithdrawalUI* GetWithdrawalUI() { return withdrawalUI; }
 
-	bool TryWithdrawal(std::string id);
+	std::string TryWithdrawal();
 
 private:
 	DataBase* dataBase;
 	WithdrawalUI* withdrawalUI;
 };
-

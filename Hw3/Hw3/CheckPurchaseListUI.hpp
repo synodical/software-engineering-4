@@ -1,22 +1,12 @@
-//
-//  checkPurchaseListUI.hpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
-
-#ifndef CheckPurchaseListUI_hpp
-#define CheckPurchaseListUI_hpp
-
-#include <stdio.h>
-#include "CheckPurchaseList.hpp"
+#pragma once
+#include <iostream>
 
 class CheckPurchaseList;
+class File;
 
 class CheckPurchaseListUI {
 public:
     CheckPurchaseListUI();
-    void SelectPurchaseList(CheckPurchaseList * checkPurchaseList);
+    void SelectPurchaseList(CheckPurchaseList * checkPurchaseList, File* file);
     void StartInterface();
 };
-#endif /* checkPurchaseListUI_hpp */

@@ -1,24 +1,21 @@
-//
-//  checkPurchaseListUI.cpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
-
 #include "CheckPurchaseListUI.hpp"
-#include <iostream>
+#include "CheckPurchaseList.hpp"
+#include "File.h"
 
-CheckPurchaseListUI::CheckPurchaseListUI() {}
-
-void CheckPurchaseListUI::StartInterface() {
-   // std::cout << "start purchase list ui" << std::endl;
+CheckPurchaseListUI::CheckPurchaseListUI() 
+{
 }
-void CheckPurchaseListUI::SelectPurchaseList(CheckPurchaseList * checkPurchaseList) {
-  //  std::cout << "select purchase list" << std::endl;
-    
-    for (auto purchasedProduct : checkPurchaseList->ShowPurchaseList()) {
-        purchasedProduct->GetProductDetails();
+
+void CheckPurchaseListUI::StartInterface()
+{
+
+}
+
+void CheckPurchaseListUI::SelectPurchaseList(CheckPurchaseList * checkPurchaseList, File* file)
+{
+    file->ofs << "4.3. ��ǰ ���� ���� ��ȸ" << '\n';
+    for (auto purchasedProduct : checkPurchaseList->ShowPurchaseList())
+    {
+        file->ofs << "> " << purchasedProduct->GetSellerID() << " " << purchasedProduct->GetProductName() << " " << purchasedProduct->GetCompanyName() << " " << purchasedProduct->GetPrice() << " " << purchasedProduct->GetAmount() << " " << purchasedProduct->GetAverageSatisfaction() << '\n' << '\n';
     }
-    // file 쓰기가 진행됨
-    // "{ [판매자ID] [상품명] [제작회사명] [가격] [남은수량] [평균 구매만족도] }*
 }

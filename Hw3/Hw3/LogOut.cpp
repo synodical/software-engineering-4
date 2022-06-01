@@ -7,36 +7,27 @@
 #include <vector>
 
 LogOut::LogOut() {
-	this->dataBase = nullptr;
-	logOutUI = new LogOutUI();
-	logOutUI->StartInterface();
+    this->dataBase = nullptr;
+    logOutUI = new LogOutUI();
+    logOutUI->StartInterface();
 }
 
 LogOut::LogOut(DataBase* dataBase) {
-	this->dataBase = dataBase;
-	logOutUI = new LogOutUI();
-	logOutUI->StartInterface();
+    this->dataBase = dataBase;
+    logOutUI = new LogOutUI();
+    logOutUI->StartInterface();
 }
 
-
-
-bool LogOut::TryLogOut(std::string id)
+std::string LogOut::TryLogOut()
 {
-	int i = 0;
-	int index = this->dataBase->GetLogInIndex();
-
-	std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
-
-	if (this->dataBase->GetLogInIndex() == -1) {
-		return false;
-	}
-
-	if (id == memberList[index]->GetID()) {
-		this->dataBase->SetLogInIndex(-1);
-		return true;
-	}
-	else {
-		return false;
-	}
-
+    int index = this->dataBase->GetLogInIndex();
+    std::string blank = "";
+    std::vector<Member*> memberList = (this->dataBase)->GetMemberList();
+    if ((this->dataBase)->GetLogInIndex() == -1) {
+        return blank;
+    }
+    else {
+        (this->dataBase)->SetLogInIndex(-1);
+        return memberList[index]->GetID();
+    }
 }

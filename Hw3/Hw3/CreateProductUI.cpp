@@ -26,6 +26,6 @@ void CreateProductUI::GetProductForm(CreateProduct* createProduct, File* file)
 
 	createProduct->AddNewProduct(productName, companyName, price, amount);
 
-	file->ofs << "3.1 판매 의류 등록" << '\n';
+	file->ofs << "3.1. 판매 의류 등록" << '\n';
 	file->ofs << "> " << productName << " " << companyName << " " << price << " " << amount << " " << '\n' << '\n';
 }

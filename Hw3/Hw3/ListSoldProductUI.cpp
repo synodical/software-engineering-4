@@ -19,10 +19,10 @@ void ListSoldProductUI::SelectShowList(ListSoldProduct* listSoldProduct, File* f
 	std::vector<Product*> data = listSoldProduct->ShowSellerProducts();
 
 	// 오름차순 정렬 필요? ( 과제2 명세서에 명시됨 )
-	file->ofs << "3.3 판매 완료 상품 조회" << '\n';
+	file->ofs << "3.3. 판매 완료 상품 조회" << '\n';
 	for (Product* product : data)
 	{
-		if (product->GetAmount() - product->GetTotalSales() == 0)
+		if (product->GetAmount() == 0)
 		{
 			file->ofs << "> " << product->GetProductName() << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetTotalSales() << " " << product->GetAverageSatisfaction() << '\n';
 		}

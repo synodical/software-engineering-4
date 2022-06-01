@@ -18,12 +18,12 @@ void ListSellingProductUI::SelectShowList(ListSellingProduct* listSellingProduct
 {
 	std::vector<Product*> data = listSellingProduct->ShowSellerProducts();
 
-	file->ofs << "3.2 등록 상품 조회" << '\n';
+	file->ofs << "3.2. 등록 상품 조회" << '\n';
 	for (Product* product : data)
 	{
-		if (product->GetAmount() - product->GetTotalSales() > 0)
+		if (product->GetAmount() > 0)
 		{
-			file->ofs << "> " << product->GetProductName() << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetAmount() - product->GetTotalSales() << '\n';
+			file->ofs << "> " << product->GetProductName() << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetAmount() << '\n';
 		}
 	}
 	file->ofs << '\n';

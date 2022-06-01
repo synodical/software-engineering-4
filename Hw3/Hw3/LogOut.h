@@ -12,9 +12,8 @@ public:
 
 	LogOutUI* GetLogOutUI() { return logOutUI; }
 
-	bool TryLogOut(std::string id);
+	std::string TryLogOut();
 private:
 	DataBase* dataBase;
 	LogOutUI* logOutUI;
 };
-

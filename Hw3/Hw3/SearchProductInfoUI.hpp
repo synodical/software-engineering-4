@@ -1,22 +1,15 @@
-//
-//  searchProductInfoUI.hpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
-
-#ifndef SearchProductInfoUI_hpp
-#define SearchProductInfoUI_hpp
-
-#include <stdio.h>
+#pragma once
+#include <iostream>
 
 class SearchProductInfo;
+class File;
 class Product;
 
-class SearchProductInfoUI { // 선언
+class SearchProductInfoUI
+{
 public:
     SearchProductInfoUI();
-    Product* SearchProduct(SearchProductInfo * searchProductInfo);
+    
+    Product* SearchProduct(SearchProductInfo * searchProductInfo, File* file);
     void StartInterface();
 };
-#endif /* searchProductInfoUI_hpp */

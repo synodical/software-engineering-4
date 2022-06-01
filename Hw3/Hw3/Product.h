@@ -8,8 +8,11 @@ public:
 	Product(std::string productName, std::string companyName, std::string price, std::string amount);
 
 	void SetSellerID(std::string sellerID) { this->sellerID = sellerID; }
+	void SetProductDetails() { this->amount -= 1; this->totalSales += 1; }
+	void SetProductDetails(float score);
 
 	std::string GetProductName() { return productName; }
+	std::string GetSellerID() { return sellerID; }
 	std::string GetCompanyName() { return companyName; }
 	int GetPrice() { return price; }
 	int GetAmount() { return amount; }
@@ -21,8 +24,10 @@ private:
 	std::string sellerID;
 	std::string companyName;
 	int price;
-	int amount;	// 수량
+	int amount;	// 남은 수량
 	float averageSatisfaction;
 	int totalSales;	// 판매된 수량
+	int evaluateNum; // 판매된 수량
+	float totalScore; // 총점
 };
 

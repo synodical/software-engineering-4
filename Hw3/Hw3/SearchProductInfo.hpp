@@ -1,25 +1,14 @@
-//
-//  searchProductInfo.hpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
+#pragma once
 
-#ifndef SearchProductInfo_hpp
-#define SearchProductInfo_hpp
+#include <iostream>
+#include "DataBase.h"
+#include "Product.h"
 
-#include <stdio.h>
-#include "DataBase.hpp"
-#include "Product.hpp"
-#include <string>
-
-class SearchProductInfo { // 선언
+class SearchProductInfo {
 private:
     DataBase * database;
 public:
     SearchProductInfo();
     SearchProductInfo(DataBase* database);
-    Product* ShowProductDetails(string productName);
+    Product* ShowProductDetails(std::string productName);
 };
-
-#endif /* searchProductInfo_hpp */

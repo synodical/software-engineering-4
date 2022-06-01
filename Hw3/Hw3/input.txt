@@ -1,0 +1,30 @@
+1 1 yeeun 001102 synodical pw1
+2 1 synodical pw1
+3 1 hat stussy 20000 10
+3 1 socks polo 5000 10
+3 1 shirts polo 108000 10
+3 2
+2 2
+1 1 park 987654 obs pw2
+2 1 obs pw2
+4 1 hat
+4 2
+4 1 hat
+4 2
+4 1 hat
+4 2
+4 1 socks
+4 2
+4 1 shirts
+4 2
+4 3
+4 4 hat 2.0
+4 4 hat 3.0
+4 4 hat 5
+4 4 socks 5
+4 4 shirts 4.5
+4 1 hat
+4 1 socks
+4 1 shirts
+2 2
+6 1

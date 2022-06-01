@@ -5,6 +5,7 @@
 
 DataBase::DataBase()
 {
+	logInIndex = -1;
 	memberList.clear();
 	sellerList.clear();
 	buyerList.clear();

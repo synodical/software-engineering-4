@@ -1,16 +1,9 @@
-//
-//  checkPurchaseList.hpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
+#pragma once
 
-#ifndef checkPurchaseList_hpp
-#define checkPurchaseList_hpp
-
-#include <stdio.h>
-#include "DataBase.hpp"
-#include "Product.hpp"
+#include <iostream>
+#include <vector>
+#include "DataBase.h"
+#include "Product.h"
 
 class CheckPurchaseList {
 private:
@@ -18,7 +11,5 @@ private:
 public:
     CheckPurchaseList();
     CheckPurchaseList(DataBase* database);
-    vector<Product*> ShowPurchaseList();
+    std::vector<Product*> ShowPurchaseList();
 };
-
-#endif /* checkPurchaseList_hpp */

@@ -1,5 +1,16 @@
 #include "File.h"
 #include "DataBase.h"
+#include "Product.h"
+
+#include "SignUp.h"
+#include "SignUpUI.h"
+#include "Withdrawal.h"
+#include "WithdrawalUI.h"
+#include "LogIn.h"
+#include "LogInUI.h"
+#include "LogOut.h"
+#include "LogOutUI.h"
+
 #include "CreateProduct.h"
 #include "CreateProductUI.h"
 #include "ListSellingProduct.h"
@@ -9,8 +20,14 @@
 #include "ShowSalesSatistics.h"
 #include "ShowSalesSatisticsUI.h"
 
-#include "Seller.h" // For Test
-#include "Buyer.h"	// For Test
+#include "SearchProductInfo.hpp"
+#include "SearchProductInfoUI.hpp"
+#include "BuyProduct.hpp"
+#include "BuyProductUI.hpp"
+#include "CheckPurchaseList.hpp" 
+#include "CheckPurchaseListUI.hpp"
+#include "EvaluateSatisfaction.hpp" 
+#include "EvaluateSatisfactionUI.hpp"
 
 void doTask();
 void program_exit(File* file);
@@ -25,9 +42,7 @@ void doTask()
 {
 	File* file = new File();
 	DataBase* dataBase = new DataBase();
-
-	dataBase->SetLogInIndex(0);// For Test
-
+	Product* curProduct = nullptr;
 
 	int menu_level_1 = 0, menu_level_2 = 0; int is_program_exit = 0;
 	while (!is_program_exit)
@@ -41,7 +56,7 @@ void doTask()
 		{
 			switch (menu_level_2)
 			{
-			case 1: 
+			case 1:
 			{
 				SignUp* signUp = new SignUp(dataBase);
 				signUp->GetSignUpUI()->SelectSignUp(signUp, file);
@@ -49,8 +64,8 @@ void doTask()
 			}
 			case 2:
 			{
-				Withdrawl* withdrawl = new Withdrawl(dataBase);
-				withdrawl->GetWithdrawlUI()->ExecuteWithdrawl(withdrawl, file);
+				Withdrawal* withdrawal = new Withdrawal(dataBase);
+				withdrawal->GetWithdrawalUI()->SelectWithdrawal(withdrawal, file);
 				break;
 			}
 			}
@@ -62,10 +77,14 @@ void doTask()
 			{
 			case 1:
 			{
+				LogIn* logIn = new LogIn(dataBase);
+				logIn->GetLogInUI()->SelectLogIn(logIn, file);
 				break;
 			}
 			case 2:
 			{
+				LogOut* logOut = new LogOut(dataBase);
+				logOut->GetLogOutUI()->SelectLogOut(logOut, file);
 				break;
 			}
 			}
@@ -98,24 +117,37 @@ void doTask()
 		}
 		case 4:
 		{
-			switch (menu_level_2)
+			switch (menu_level_2) {
+			case 1: // 4 1, 상품 검색
 			{
-			case 1:
-			{
+				SearchProductInfo* searchProductInfo = new SearchProductInfo(dataBase); //1
+				SearchProductInfoUI* searchProductInfoUI = new SearchProductInfoUI();
+				curProduct = searchProductInfoUI->SearchProduct(searchProductInfo,file); // 2
 				break;
 			}
-			case 2:
+			case 2: // 4 2, 상품 구매
 			{
+				BuyProduct* buyProduct = new BuyProduct(dataBase); // start itf
+				BuyProductUI* buyProductUI = new BuyProductUI();
+				buyProductUI->SelectBuy(buyProduct, curProduct, file); //
 				break;
 			}
-			case 3:
+			case 3: // 4 3, 나의 구매 내역 조회
 			{
+				CheckPurchaseList* checkPurchaseList = new CheckPurchaseList(dataBase);
+				CheckPurchaseListUI* checkPurchaseListUI = new CheckPurchaseListUI();
+				checkPurchaseListUI->SelectPurchaseList(checkPurchaseList, file);
 				break;
 			}
-			case 4:
+			case 4: // 4 3, 나의 구매 내역 조회
 			{
+				EvaluateSatisfaction* evaluateSatisfaction = new EvaluateSatisfaction(dataBase);
+				EvaluateSatisfactionUI* evaluateSatisfactionUI = new EvaluateSatisfactionUI();
+				evaluateSatisfactionUI->EnterSatisfactionInfo(evaluateSatisfaction, file);
 				break;
 			}
+			default:
+				break;
 			}
 			break;
 		}
@@ -140,6 +172,7 @@ void doTask()
 			{
 				program_exit(file);
 				is_program_exit = 1;
+				exit(1);
 				break;
 			}
 			}
@@ -152,6 +185,7 @@ void doTask()
 
 void program_exit(File* file)
 {
+	file->ofs << "6.1 종료" << "\n";
 	file->ifs.close();
 	file->ofs.close();
 }

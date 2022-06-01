@@ -1,26 +1,15 @@
-//
-//  evaluateSatisfaction.hpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
+#pragma once
+#include <iostream>
 
-#ifndef evaluateSatisfaction_hpp
-#define evaluateSatisfaction_hpp
+class DataBase;
+class Product;
 
-#include <stdio.h>
-#include "DataBase.hpp"
-#include "Product.hpp"
-#include "EvaluateSatisfactionUI.hpp"
-#include "Seller.hpp"
-
-class EvaluateSatisfaction { // 선언
+class EvaluateSatisfaction
+{ 
 private:
     DataBase * database;
 public:
     EvaluateSatisfaction();
     EvaluateSatisfaction(DataBase* database);
-   // Product* ShowProductDetails(string product_name);
-    void GetSatisfactionInfo(string productName, double score);
+    Product* UpdateSatisfactionInfo(std::string productName, float score);
 };
-#endif /* evaluateSatisfaction_hpp */

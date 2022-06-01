@@ -1,21 +1,26 @@
-//
-//  evaluateSatisfactionUI.cpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
-
 #include "EvaluateSatisfactionUI.hpp"
-#include <iostream>
+#include "EvaluateSatisfaction.hpp"
+#include "File.h"
+#include "Product.h"
 
-EvaluateSatisfactionUI::EvaluateSatisfactionUI() {}
-void EvaluateSatisfactionUI::EnterSatisfactionInfo(EvaluateSatisfaction * evaluateSatisfaction) {
-    double score; string productName;
-    cin >> productName >> score;
-    evaluateSatisfaction->GetSatisfactionInfo(productName, score);
-    // file write
-    // write "íŒë§¤ì id, ìƒí’ˆëª…, í˜„ì¬ í‰ê°€í•œ êµ¬ë§¤ë§Œì¡±ë„"
+EvaluateSatisfactionUI::EvaluateSatisfactionUI() 
+{
+
 }
-void EvaluateSatisfactionUI::StartInterface() {
-   // std::cout << "enter product name and score" << std::endl;
+
+void EvaluateSatisfactionUI::EnterSatisfactionInfo(EvaluateSatisfaction * evaluateSatisfaction, File* file) 
+{
+    float score;
+    std::string productName;
+    file->ifs.seekg(file->readed);
+    file->ifs >> productName >> score;
+    file->readed = file->ifs.tellg();
+
+    Product* product = evaluateSatisfaction->UpdateSatisfactionInfo(productName, score);
+    file->ofs << "4.4. »óÇ° ±¸¸Å¸¸Á·µµ Æò°¡" << '\n';
+    file->ofs << "> " << product->GetSellerID() << " " << productName << " " << score << '\n' << '\n';
+}
+
+void EvaluateSatisfactionUI::StartInterface() 
+{
 }

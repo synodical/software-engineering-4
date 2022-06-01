@@ -1,27 +1,21 @@
-//
-//  checkPurchaseList.cpp
-//  swe-hw3-member
-//
-//  Created by LeeYeEun on 2022/06/01.
-//
-
 #include "CheckPurchaseList.hpp"
 #include "CheckPurchaseListUI.hpp"
-#include "Buyer.hpp"
+#include "Buyer.h"
 
-class CheckPurChaseListUI;
-
-CheckPurchaseList::CheckPurchaseList() {
+CheckPurchaseList::CheckPurchaseList() 
+{
     CheckPurchaseListUI listUI;
     listUI.StartInterface();
 }
 
-CheckPurchaseList::CheckPurchaseList(DataBase * database) {
+CheckPurchaseList::CheckPurchaseList(DataBase * database) 
+{
     this->database = database;
     CheckPurchaseListUI listUI;
     listUI.StartInterface();
 }
 
-vector<Product*> CheckPurchaseList::ShowPurchaseList() {
+std::vector<Product*> CheckPurchaseList::ShowPurchaseList()
+{
     return database->GetBuyerList()[database->GetLogInIndex()]->GetProductList();
 }
