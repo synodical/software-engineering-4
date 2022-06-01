@@ -1,1 +1,28 @@
+[highstar97] Tue May 17 22:06:37 2022 +0900 Hw2 Use case Class Diagram f9e089f
+[highstar97] Tue May 17 22:06:26 2022 +0900 Hw2 Requirement LIst & Use Case Description 0dcc2f0
+[highstar97] Tue May 17 22:06:06 2022 +0900 Hw2 Communication Diagram 576ce75
+[synodical] Tue May 17 22:04:49 2022 +0900 Merge branch 'main' of https://github.com/synodical/software-engineering-4 151929f
+[synodical] Tue May 17 22:04:22 2022 +0900 hw2: communication and class diagram ba6a421
+[yi219] Tue May 17 21:59:54 2022 +0900 hw2 a5ca850
+[이예은, Ye Eun Lee] Sun May 1 22:37:39 2022 +0900 Add files via upload de93912
+[yi219] Sun May 1 22:36:06 2022 +0900 Add files via upload 466aee4
+[highstar97] Sun May 1 22:34:20 2022 +0900 Merge branch 'main' of https://github.com/synodical/software-engineering-4 5473720
+[highstar97] Sun May 1 22:34:15 2022 +0900 파일 정리 998220b
+[이예은, Ye Eun Lee] Sun May 1 22:23:46 2022 +0900 Add files via upload f86bb74
+[이예은, Ye Eun Lee] Sun May 1 22:22:18 2022 +0900 Add files via upload 01eb183
+[이예은, Ye Eun Lee] Sun May 1 22:20:45 2022 +0900 Add files via upload e83fe4d
+[highstar97] Sun May 1 22:19:17 2022 +0900 Merge branch 'main' of https://github.com/synodical/software-engineering-4 dcc4cc7
+[highstar97] Sun May 1 22:19:04 2022 +0900 Use case Description 수정 e0488d5
+[yi219] Sun May 1 01:17:00 2022 +0900 Add files via upload 3911b4f
+[yi219] Sun May 1 01:14:18 2022 +0900 Create addFolder.txt ee78cd6
+[highstar97] Fri Apr 29 19:25:27 2022 +0900 UseCase Diagram 작성 b70ca49
+[highstar97] Fri Apr 29 19:25:17 2022 +0900 Usecase Description 작성 ce79ffb
 [highstar97] Fri Apr 29 19:25:05 2022 +0900 UI_Screen 디자인 작성 43506e5
+[highstar97] Fri Apr 29 19:24:51 2022 +0900 Requirement List 작성 e538a25
+[highstar97] Fri Apr 29 19:24:34 2022 +0900 Actor Description 작성 718e306
+[synodical] Fri Apr 29 00:54:29 2022 +0900 Merge branch 'main' of https://github.com/synodical/software-engineering-4 bb7ce58
+[synodical] Fri Apr 29 00:53:53 2022 +0900 yeeun- use case diagram 완성하기 27c9d73
+[이예은, Ye Eun Lee] Fri Apr 29 00:50:16 2022 +0900 Delete usecase_yeeun.mdj 4f23a60
+[synodical] Fri Apr 29 00:48:55 2022 +0900 use case diagram 완성하기 d28ef49
+[LeeYeEun] Tue Apr 26 20:34:07 2022 +0900 work directory 분리하기 4a6afb7
+[synodical] Mon Apr 25 19:33:16 2022 +0900 first commit cf99157
