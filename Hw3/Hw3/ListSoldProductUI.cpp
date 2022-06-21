@@ -29,7 +29,7 @@ void ListSoldProductUI::SelectShowList(ListSoldProduct* listSoldProduct, File* f
 	{
 		if (product->GetAmount() == 0)
 		{
-			file->ofs << "> " << product->GetProductName() << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetTotalSales() << " " << product->GetAverageSatisfaction() << '\n';
+			file->ofs << "> " << product->GetProductName() << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetTotalSales() << " " <<  floor(product->GetAverageSatisfaction()+0.5) << '\n';
 		}
 	}
 	file->ofs << '\n';

@@ -23,7 +23,7 @@ void ShowSalesSatisticsUI::SelectShowSatistics(ShowSalesSatistics* showSalesSati
 	{
 		if (product->GetTotalSales() > 0)
 		{
-			file->ofs << "> " << product->GetProductName() << " " << product->GetPrice() * product->GetTotalSales() << " " << product->GetAverageSatisfaction() << '\n';
+			file->ofs << "> " << product->GetProductName() << " " << product->GetPrice() * product->GetTotalSales() << " " << floor(product->GetAverageSatisfaction()+0.5) << '\n';
 		}
 	}
 	file->ofs << '\n';

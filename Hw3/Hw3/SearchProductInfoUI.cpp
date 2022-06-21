@@ -18,7 +18,7 @@ Product* SearchProductInfoUI::SearchProduct(SearchProductInfo * searchProductInf
     Product* product = searchProductInfo->ShowProductDetails(productName);
 
     file->ofs << "4.1. 상품 정보 검색" << '\n';
-    file->ofs << "> " << product->GetSellerID() << " " << productName << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetAmount() << " " << product->GetAverageSatisfaction() << '\n' << '\n';
+    file->ofs << "> " << product->GetSellerID() << " " << productName << " " << product->GetCompanyName() << " " << product->GetPrice() << " " << product->GetAmount() << " " << floor(product->GetAverageSatisfaction()+0.5) << '\n' << '\n';
     return product;
 }
 
